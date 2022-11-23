@@ -1,6 +1,6 @@
 import {getToken} from "../LocalStorage";
 
-const SERVER_ADDRESS = 'http://localhost:3000';
+const SERVER_ADDRESS = process.env.WEB_BASE_URL;
 
 export const fetchApi = (endpoint, {body, method, ...options} = {}) => {
     return fetch(`${SERVER_ADDRESS}/${endpoint}`, {
